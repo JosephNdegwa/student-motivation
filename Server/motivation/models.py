@@ -21,3 +21,6 @@ class Post(models.Model):
     audio_track = models.FileField(upload_to = 'post/',blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=50,choices=category,default='Fullstack')
+
+    def __unicode__(self):
+        return self.title

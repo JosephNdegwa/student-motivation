@@ -1,0 +1,15 @@
+
+{% block content %}
+    <div id="singlesong">
+        <p>Title: {{ title }}</p>
+    <p>Article: <a href="{{ article }}/">{{ post.article }}</a></p>
+
+    <p><video controls="controls">
+        <source src="{{ post.video.url }}" >
+    </video>
+
+    <p><audio controls="controls">
+        <source src="{{ post.audio_track.url }}" type="audio/mpeg" />
+    </audio>
+</div>
+{% endblock %}
