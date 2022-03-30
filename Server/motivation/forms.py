@@ -9,7 +9,7 @@ from . import models
 class StaffUserForm(forms.ModelForm):
     class Meta:
         model=User
-        fields=['first_name','last_name','password']
+        fields=['first_name','last_name','username','password']
         widgets = {
         'password': forms.PasswordInput()
         }
@@ -25,7 +25,7 @@ class StaffForm(forms.ModelForm):
 class StudentUserForm(forms.ModelForm):
     class Meta:
         model=User
-        fields=['first_name','last_name','password']
+        fields=['first_name','last_name','username','password']
         widgets = {
         'password': forms.PasswordInput()
         }
