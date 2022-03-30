@@ -1,5 +1,6 @@
 {% extends 'index-base.html' %}
 {% block content %}
+
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="container register-form">
@@ -24,7 +25,7 @@
             </div>
           </div>
           <button type="submit" class="btnSubmit">Register</button>
-          <div class="text-center">Already have an account? <a href="stafflogin">Login here</a></div>
+          <div class="text-center">Already have an account? <a href="staff-login">Login here</a></div>
         </div>
       </div>
     </div>

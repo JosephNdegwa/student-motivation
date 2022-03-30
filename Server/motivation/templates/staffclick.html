@@ -1,3 +1,5 @@
+{% extends 'index-base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    This is my <br>
-    <a href="{% url 'staff-signup' %}">Staff</a><br>
-    <a href="{% url 'studentclick' %}">Student</a>
-
+    Staff
 </body>
 </html>
+{% endblock %}
