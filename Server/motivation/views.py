@@ -13,10 +13,6 @@ def home_view(request):
     return render(request, 'index.html')
 
 
- 
-
-
-
 
 #for showing signup/login button for staff
 def staffclick_view(request):
