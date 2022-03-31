@@ -342,8 +342,6 @@ def all_users(request):
     if request.method == 'GET':
         serializer = UserListSerializer(users, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-    return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
     
 @api_view(['GET','PUT'])
 @permission_classes((IsAuthenticated,))
