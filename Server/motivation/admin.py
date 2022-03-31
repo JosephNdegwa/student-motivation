@@ -1,9 +1,7 @@
 from django.contrib import admin
 
-from motivation.models import Post, Staff, Student
+from motivation.models import StudentUser 
 
 # Register your models here.
-admin.site.register(Staff)
-admin.site.register(Student)
-
-admin.site.register(Post)
+admin.site.register(StudentUser)
+# admin.site.register(Post)

@@ -1,14 +1,13 @@
 from django import forms
-<<<<<<< HEAD
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import User
 from . import models
 class StaffUserManager(BaseUserManager):
     def create_user(self, username, password, **extra_fields):
         if not username:
-            raise ValueError(_("Please input a valid username"))
+            raise ValueError(("Please input a valid username"))
         if not password:
-            raise ValueError(_("Please a Password"))
+            raise ValueError(("Please a Password"))
         username = self.normalize_email(username)
         user = self.model(username=username, **extra_fields)
         user.set_password(password)
@@ -26,47 +25,3 @@ class StaffUserManager(BaseUserManager):
         new_user.save()
 
         return new_user
-=======
-from django.contrib.auth.models import User
-from . import models
-
-
-
-
-
-class StaffUserForm(forms.ModelForm):
-    class Meta:
-        model=User
-        fields=['first_name','last_name','username','password']
-        widgets = {
-        'password': forms.PasswordInput()
-        }
-
-class StaffForm(forms.ModelForm):
-    class Meta:
-        model=models.Staff
-        fields=['mobile']
-
-
-
-
-class StudentUserForm(forms.ModelForm):
-    class Meta:
-        model=User
-        fields=['first_name','last_name','username','password']
-        widgets = {
-        'password': forms.PasswordInput()
-        }
-
-class StudentForm(forms.ModelForm):
-    assignedStaffId=forms.ModelChoiceField(queryset=models.Staff.objects.all().filter(status=True),empty_label="Name and Department", to_field_name="user_id")
-    class Meta:
-        model=models.Student
-        fields=['mobile']
-
-
-
-
-
-
->>>>>>> development
