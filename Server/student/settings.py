@@ -35,7 +35,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'motivation',
-    'cloudinary',
     'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+ ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -117,7 +116,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = "motivation.StudentUser"
+LOGIN_REDIRECT_URL='/afterlogin'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 

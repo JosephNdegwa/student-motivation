@@ -1,73 +1,71 @@
 from distutils.command.upload import upload
 from unicodedata import category
 from django.db import models
+from django.forms import CharField
+from django.db import models
+from django.contrib.auth.models import User
+# Create your models here.
+class Staff(models.Model):
+    name = models.CharField(max_length=250)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    email = models.EmailField()
+    
+ 
+    def __str__(self):
+        return self.name
 import datetime as dt
-from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
-from django.contrib.auth.models import PermissionsMixin
-from django.contrib.auth.base_user import AbstractBaseUser
-from .forms import StaffUserManager
+
 # Create your models here.
-class StudentUser(AbstractBaseUser, PermissionsMixin):
-    ADMIN = 1
-    STUDENT = 2
+category=[('Fullstack','Fullstack'),
+('DevOps','DevOps'),
+('Front-End','Front-End')
+]
 
-    USER_ROLE_CHOICES = (
-        (ADMIN, 'Staff'),
-        (STUDENT, 'Student'),
-    )
-    username = models.CharField(unique=True,max_length=20)
-    first_name = models.CharField(max_length=30, blank=True,null=True)
-    last_name = models.CharField(max_length=50, blank=True,null=True)
-    email = models.EmailField()
-    role = models.PositiveSmallIntegerField(choices=USER_ROLE_CHOICES, blank=True, null=True, default=2)
-    date_joined = models.DateTimeField(auto_now_add=True)
-    is_superuser = models.BooleanField(default=False)
-    is_staff = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
-    is_deleted = models.BooleanField(default=False)
-    modified_by = models.EmailField()
+class Staff(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    mobile = models.CharField(max_length=20,null=True)
+    status=models.BooleanField(default=False)
 
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = []
+    @property
+    def get_name(self):
+        return self.user.first_name+" "+self.user.last_name
 
-    objects = StaffUserManager()
-
+    @property
+    def get_id(self):
+        return self.user.id
+        
     def __str__(self):
-        return self.username
-    
-    class Meta:
-        verbose_name = 'user'
-        verbose_name_plural = 'users'
 
-class Category(models.Model):
-    category = models.CharField(max_length=50)
-    pub_date = models.DateTimeField(auto_now_add=True) 
+        return self.user.first_name
 
+
+
+class Student(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    mobile = models.CharField(max_length=20,null=True)
+    status=models.BooleanField(default=False)
+
+    @property
+    def get_name(self):
+        return self.user.first_name+" "+self.user.last_name
+    @property
+    def get_id(self):
+        return self.user.id
     def __str__(self):
-            return self.category
-class Profile(models.Model): 
-    user = models.OneToOneField(StudentUser, on_delete=models.CASCADE)
-    profile_photo = CloudinaryField('image',blank=True,null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True,blank=True)
-    pub_date = models.DateTimeField(auto_now_add=True) 
+        return self.user.first_name
 
-    def __str__(self):
-       return self.user.username 
+
 
 class Post(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     title = models.CharField(max_length=260)
     article = HTMLField(blank=True)
-    video = models.FileField(blank=True,null=True)
-    audio_track = models.FileField(upload_to='post/', blank=True)
-    profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
+    video = models.FileField(upload_to = 'post/',blank=True)
+    audio_track = models.FileField(upload_to = 'post/',blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True,blank=True)
-    updated = models.DateTimeField(auto_now=True)
-      
-    def __str__(self):
-       return self.title
+    category = models.CharField(max_length=50,choices=category,default='Fullstack')
 
-
+    
+ 
