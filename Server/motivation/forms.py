@@ -23,5 +23,4 @@ class StaffUserManager(BaseUserManager):
         new_user.is_admin = True
         new_user.is_staff = True
         new_user.save()
-
         return new_user
