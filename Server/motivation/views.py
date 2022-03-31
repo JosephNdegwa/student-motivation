@@ -1,31 +1,36 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,reverse
 from django.conf import settings
 from . import forms,models
 from django.contrib.auth.models import Group
-
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
 def home_view(request):
-    if request.user.is_authenticated:
-        return HttpResponseRedirect('afterlogin')
-    return render(request, 'index.html')
+    # if request.user.is_authenticated:
+     return render(request,'index.html')
+
+
+
+
+
 
 
 
 #for showing signup/login button for staff
 def staffclick_view(request):
     if request.user.is_authenticated:
-        # return HttpResponseRedirect('afterlogin')
+        #return HttpResponseRedirect('afterlogin')
         return render(request,'staffclick.html')
 
 
 #for showing signup/login button for student
 def studentclick_view(request):
-    if request.user.is_authenticated:
-        # return HttpResponseRedirect('afterlogin')
-       return render(request,'motiversity/studentclick.html')
+    # if request.user.is_authenticated:
+        #return HttpResponseRedirect('afterlogin')
+        return render(request,'studentclick.html')
 
 
 
@@ -45,9 +50,12 @@ def staff_signup_view(request):
             staff=staff.save()
             my_staff_group = Group.objects.get_or_create(name='STAFF')
             my_staff_group[0].user_set.add(user)
-        return HttpResponseRedirect('stafflogin')
+        return HttpResponseRedirect('staff-login')
     return render(request,'staff-signup.html',context=mydict)
 
+@login_required
+def staff_login_view(request):
+    return render(request,'staff-login.html')
 
 
 def student_signup_view(request):
@@ -79,6 +87,21 @@ def Post(request, title):
     post = Post.objects.get(title = title)
     context = {'post':post}
     return render(request,'post.html')
+
+
+def is_staff(user):
+    return user.groups.filter(name='STAFF').exists()
+
+
+# Check if credential match8
+def afterlogin_view(request):
+    if is_staff(request.user):
+        accountapproval=models.Staff.objects.all().filter(user_id=request.user.id,status=True)
+        if accountapproval:
+            return redirect('index.html')
+        else:
+            return render(request,'index.html')
+
 
 
 
