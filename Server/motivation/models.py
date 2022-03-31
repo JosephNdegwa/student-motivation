@@ -1,9 +1,15 @@
 from distutils.command.upload import upload
 from unicodedata import category
 from django.db import models
+from django.forms import CharField
+from django.db import models
+from django.contrib.auth.models import User
 import datetime as dt
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
+# Create your models here.
+   
+
 
 # Create your models here.
 category=[('Fullstack','Fullstack'),
@@ -42,10 +48,7 @@ class Student(models.Model):
     def get_id(self):
         return self.user.id
     def __str__(self):
-        return self.user.first_name
-
-
-
+       return self.user.username 
 class Post(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     title = models.CharField(max_length=260)
@@ -56,3 +59,4 @@ class Post(models.Model):
     category = models.CharField(max_length=50,choices=category,default='Fullstack')
 
     
+ 
