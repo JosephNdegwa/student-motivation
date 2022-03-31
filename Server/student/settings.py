@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,6 +122,12 @@ LOGIN_REDIRECT_URL='/afterlogin'
 
 STATIC_URL = 'static/'
 
+# adding config
+cloudinary.config( 
+  cloud_name = "dofhqzexf", 
+  api_key = "677344245685254", 
+  api_secret = "WjJxvJN-UspQrQ_e20araK0SGt4" 
+)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
