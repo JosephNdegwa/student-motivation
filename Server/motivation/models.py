@@ -2,16 +2,13 @@ from distutils.command.upload import upload
 from unicodedata import category
 from django.db import models
 import datetime as dt
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
 from .forms import StaffUserManager
 # Create your models here.
-category = [('Fullstack', 'Fullstack'),
-            ('DevOps', 'DevOps'),
-            ('Front-End', 'Front-End')
-            ]
 class StudentUser(AbstractBaseUser, PermissionsMixin):
     ADMIN = 1
     STUDENT = 2
@@ -45,12 +42,32 @@ class StudentUser(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'user'
         verbose_name_plural = 'users'
 
-# class Post(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     title = models.CharField(max_length=260)
-#     article = HTMLField(blank=True)
-#     video = models.FileField(upload_to='post/', blank=True)
-#     audio_track = models.FileField(upload_to='post/', blank=True)
-#     pub_date = models.DateTimeField(auto_now_add=True)
-#     category = models.CharField(
-#         max_length=50, choices=category, default='Fullstack')
+class Category(models.Model):
+    category = models.CharField(max_length=50)
+    pub_date = models.DateTimeField(auto_now_add=True) 
+
+    def __str__(self):
+            return self.category
+class Profile(models.Model): 
+    user = models.OneToOneField(StudentUser, on_delete=models.CASCADE)
+    profile_photo = CloudinaryField('image',blank=True,null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True,blank=True)
+    pub_date = models.DateTimeField(auto_now_add=True) 
+
+    def __str__(self):
+       return self.user.username 
+
+class Post(models.Model):
+    title = models.CharField(max_length=260)
+    article = HTMLField(blank=True)
+    video = models.FileField(blank=True,null=True)
+    audio_track = models.FileField(upload_to='post/', blank=True)
+    profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True,blank=True)
+    updated = models.DateTimeField(auto_now=True)
+      
+    def __str__(self):
+       return self.title
+
+
