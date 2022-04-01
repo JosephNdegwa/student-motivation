@@ -15,7 +15,7 @@ from .models import  Category, Post,Review, Profile, ReviewThread,WishList
 from django.contrib.auth.decorators import user_passes_test
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.authtoken.views import ObtainAuthToken
+# from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.generics import RetrieveAPIView
 from django.contrib.auth.models import User
