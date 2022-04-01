@@ -71,7 +71,7 @@ def motivat(request, profile):
 
 @api_view(['GET', 'POST', 'DELETE'])
 @permission_classes((AllowAny, ))
-def motivation(request):
+def post(request):
     user = request.user
     # profile = Profile.objects.get(user=user)
     # serializer = ProfileSerializer(profile, many=False)
