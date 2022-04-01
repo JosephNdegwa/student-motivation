@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-1^y19c0%26mz$mb^qr!8x831(zde^7-=51sd1s0slqit5k$0vv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost:4200']
 
 
 # Application definition
@@ -35,6 +35,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'motivation',
     'widget_tweaks',
+    'cloudinary',
+    'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
+    'django_filters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -116,6 +120,42 @@ USE_I18N = True
 USE_TZ = True
 
 LOGIN_REDIRECT_URL='/'
+
+# adding config
+cloudinary.config( 
+  cloud_name = "dofhqzexf", 
+  api_key = "677344245685254", 
+  api_secret = "WjJxvJN-UspQrQ_e20araK0SGt4" 
+)
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.AllowAny',
+#     ),
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#         'rest_framework.authentication.SessionAuthentication',
+#         'rest_framework.authentication.BasicAuthentication',
+#     ),
+#     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+#     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+# }
+
+# SIMPLE_JWT = {
+#     'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=1),
+#     'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=14),
+#     'ROTATE_REFRESH_TOKENS': True,
+#     'BLACKLIST_AFTER_ROTATION': True,
+#     'ALGORITHM': 'HS256',
+#     'SIGNING_KEY': SECRET_KEY,
+#     'VERIFYING_KEY': None,
+#     'AUTH_HEADER_TYPES': ('Bearer',),
+#     'USER_ID_FIELD': 'id',
+#     'USER_ID_CLAIM': 'user_id',
+#     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+#     'TOKEN_TYPE_CLAIM': 'token_type',
+#     'JTI_CLAIM': 'jti',
+# }
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
