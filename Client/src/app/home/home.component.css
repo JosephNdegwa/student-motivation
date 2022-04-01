@@ -6,4 +6,21 @@
     background-attachment: fixed;
      background-position: top-center;
  }
- 
+
+ h1{
+   font-size: 60px;
+   color: #11284B;
+ }
+ span{
+   color: #FE3636;
+ }
+
+ .btn1{
+   background-color: #11284B;
+   color: white;
+ }
+
+ .btn2{
+   background-color: #FE3636;
+   color: white;
+ }

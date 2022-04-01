@@ -121,13 +121,3 @@ LOGIN_REDIRECT_URL='/afterlogin'
 
 STATIC_URL = 'static/'
 
-# adding config
-cloudinary.config( 
-  cloud_name = "dofhqzexf", 
-  api_key = "677344245685254", 
-  api_secret = "WjJxvJN-UspQrQ_e20araK0SGt4" 
-)
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
