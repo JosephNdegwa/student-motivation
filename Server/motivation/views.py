@@ -16,7 +16,7 @@ from rest_framework import generics
 from rest_framework.parsers import JSONParser
 from rest_framework import status
 from .serializers import PostSerializer, PostPostSerializer, ReviewSerializer,CategorySerializer, ProfileSerializer
-from .models import  Category, Motivation,Review, Profile, ReviewThread,WishList
+from .models import  Category, Post,Review, Profile, ReviewThread,WishList
 from django.contrib.auth.decorators import user_passes_test
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
@@ -342,8 +342,6 @@ def all_users(request):
     if request.method == 'GET':
         serializer = UserListSerializer(users, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-     return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
     
 @api_view(['GET','PUT'])
 @permission_classes((IsAuthenticated,))
@@ -482,7 +480,7 @@ def wishlist_motivation(request,pk):
 
     profile = Profile.objects.filter(user=user).first()
     wishlist = WishList.objects.filter(profile=profile).all()
-    motivation = Motivation.objects.get(pk=pk)
+    post = Post.objects.get(pk=pk)
 
     if request.method == 'GET':
         wishlist_serializer = WishListSerializer(wishlist,many=True)
@@ -494,7 +492,7 @@ def wishlist_motivation(request,pk):
         if new_wish_serializer.is_valid():
             new_wish_serializer.save(    
             profile = Profile.objects.filter(user=user).first(),
-            motivation = Motivation.objects.get(pk=pk)
+            motivation = Post.objects.get(pk=pk)
             )
             return Response(new_wish_serializer.data,status = status.HTTP_200_OK)
         else:
