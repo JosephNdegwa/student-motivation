@@ -4,11 +4,6 @@ from . import forms,models
 from django.contrib.auth.models import Group
 from django.http import HttpResponseRedirect
 from .models import  Category, Post,Review, Profile, ReviewThread,WishList
-
-
-
-
-
 from django.http.response import JsonResponse, Http404, HttpResponseRedirect
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -20,7 +15,7 @@ from .models import  Category, Post,Review, Profile, ReviewThread,WishList
 from django.contrib.auth.decorators import user_passes_test
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.authtoken.views import ObtainAuthToken
+#from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.generics import RetrieveAPIView
 from django.contrib.auth.models import User
@@ -221,7 +216,7 @@ class RevList(generics.ListAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['motivation',]
+    filterset_fields = ['post',]
 
 class ReviewList(APIView):
     permission_classes = (AllowAny, )

@@ -49,7 +49,7 @@ class Category(models.Model):
     def __str__(self):
             return self.category
 
-
+# profile class
 class Profile(models.Model): 
     user = models.OneToOneField(StudentUser, on_delete=models.CASCADE)
     profile_photo = CloudinaryField('image',blank=True,null=True)
@@ -79,7 +79,7 @@ class Post(models.Model):
 class Review(models.Model):
     review = models.TextField()
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
-    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE,null=True)
     pub_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
