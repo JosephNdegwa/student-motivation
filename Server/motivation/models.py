@@ -79,7 +79,7 @@ class Post(models.Model):
 class Review(models.Model):
     review = models.TextField()
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
-    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE,null=True)
     pub_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
