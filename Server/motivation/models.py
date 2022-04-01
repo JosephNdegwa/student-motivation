@@ -49,7 +49,7 @@ class Category(models.Model):
     def __str__(self):
             return self.category
 
-
+# profile class
 class Profile(models.Model): 
     user = models.OneToOneField(StudentUser, on_delete=models.CASCADE)
     profile_photo = CloudinaryField('image',blank=True,null=True)
