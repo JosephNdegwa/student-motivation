@@ -7,7 +7,7 @@ class StaffUserManager(BaseUserManager):
         if not username:
             raise ValueError(("Please input a valid username"))
         if not password:
-            raise ValueError(("Please a Password"))
+            raise ValueError(("Please input a Password"))
         username = self.normalize_email(username)
         user = self.model(username=username, **extra_fields)
         user.set_password(password)
