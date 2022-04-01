@@ -23,15 +23,8 @@ distro==1.4.0
 distro-info===0.23ubuntu1
 dj-database-url==0.5.0
 Django==4.0.3
-django-bootstrap4==22.1
-django-crispy-forms==1.14.0
+django-cors-headers==3.11.0
 django-filter==21.1
-<<<<<<< HEAD
-django-heroku==0.3.1
-django-rest-framework==0.1.0
-django-tinymce==3.4.0
-=======
->>>>>>> a28ccefcc37e3a0b23acb3992268ebad0a50c680
 django-widget-tweaks==1.4.12
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.1.0
