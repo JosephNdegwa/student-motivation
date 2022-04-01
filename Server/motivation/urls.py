@@ -1,9 +1,15 @@
 from django.conf import settings
-from django.urls import path
+from django.urls import path,include
 from . import views
-
+from rest_framework import routers
+from django.conf.urls.static import static
+from rest_framework_simplejwt import views as jwt_views
+from .views import(
+    AuthUserRegistrationView,AuthUserLoginView,
+    AuthLogoutView,UserListView,
+)
 urlpatterns=[
-    
+    path('post/', views.post), 
     #path('',views.home_view,name='homeView'),
     #path('staff/',views.staffclick_view, name="staffclick"),
     #path('staff-signup', views.staff_signup_view,name='staff-signup'),
