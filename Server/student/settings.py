@@ -128,7 +128,6 @@ cloudinary.config(
   api_key = "677344245685254", 
   api_secret = "WjJxvJN-UspQrQ_e20araK0SGt4" 
 )
-
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
@@ -165,6 +164,5 @@ CORS_ALLOWED_ORIGINS = [
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
 
 AUTH_USER_MODEL = "motivation.StudentUser"
