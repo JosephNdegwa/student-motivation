@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
-from .forms import StaffUserManager
+from .forms import CustomUserManager
 # Create your models here.
 class StudentUser(AbstractBaseUser, PermissionsMixin):
     ADMIN = 1
@@ -33,7 +33,7 @@ class StudentUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
 
-    objects = StaffUserManager()
+    objects = CustomUserManager()
 
     def __str__(self):
         return self.username
