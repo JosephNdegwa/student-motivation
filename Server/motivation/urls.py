@@ -10,11 +10,9 @@ from .views import(
 )
 urlpatterns=[
     path('post/', views.post),
-
     path('post/mot-id/<int:pk>', views.post_id, name='post_id'),
     path('mot-cat/(?P<cat_pk>[0-9]+)', views.MotivationalByCategory.as_view()),
     path('rev/', views.ReviewList.as_view()),
-    # http://127.0.0.1:8000/api/rev?motivation=2
     path('review/rev-id/(?P<pk>[0-9]+)/', views.ReviewDescription.as_view()),
     path('category/', views.CategoryList.as_view()),
     path('category/cat_idd/(?P<cat_pk>[0-9]+)', views.category_id),
@@ -26,7 +24,7 @@ urlpatterns=[
     path('token/obtain/', jwt_views.TokenObtainPairView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('api/register', AuthUserRegistrationView.as_view(), name='register'),
-    path('login', AuthUserLoginView.as_view(), name='login'),
+    path('api/login', AuthUserLoginView.as_view(), name='login'),
     path('logout',AuthLogoutView.as_view(),name='logout'),
     path('subscribe/<int:pk>',views.subscription_service,name='category_subscription'),
     path('users', views.all_users, name='users'),

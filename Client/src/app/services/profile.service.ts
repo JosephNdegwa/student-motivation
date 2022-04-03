@@ -27,11 +27,16 @@ export class ProfileService {
 					'Authorization': `JWT ${user.access}`
 				});
 			}
-
 			return new HttpHeaders({
 				'Content-Type': 'application/json',
 				'Authorization': `token ${user.token}`
 			});
+		
+
+		
+		}
+		else {
+			return 
 		}
 	}
 
