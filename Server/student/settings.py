@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-1^y19c0%26mz$mb^qr!8x831(zde^7-=51sd1s0slqit5k$0vv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsPostCsrfMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -128,6 +129,9 @@ cloudinary.config(
   api_key = "677344245685254", 
   api_secret = "WjJxvJN-UspQrQ_e20araK0SGt4" 
 )
+
+
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
@@ -166,3 +170,19 @@ CORS_ALLOWED_ORIGINS = [
 STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = "motivation.StudentUser"
+
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+#ALLOWED_HOSTS=['localhost']    
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:4200',
+)
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:4200",
+
+]
