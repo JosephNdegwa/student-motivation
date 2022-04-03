@@ -1,14 +1,50 @@
- <main class="form-signin">
-  <a class="btn btn1" routerLink='/'>Back</a><br><br>
-    <form>
-      <h1 class="h3 mb-3 fw-normal">Register</h1>
-      <input type="text" class="form-control mt-3"  placeholder="username" required>
-      <input type="email" class="form-control mt-3"  placeholder="Email" required>
+<div class="container-fluid signup">
+  <h1>Register</h1>
+  <div class="row">
+      <div class="col-md-5 signup-form">
+        <form action="" class="form"  #signupForm="ngForm">
+        <form action="" class="form">
 
-        <input type="password" class="form-control mt-3" placeholder="Password" required>
+          <div class="form-item">
+             <label for="username" class="mb-2">username</label>
+            <input [(ngModel)]="register.username"  name = "username" type="text" class=" input mb-3"  placeholder="Username"
+              required="required">
+          </div>
 
-      <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">login</button>
+          <div class="form-item">
+            <label for="email"  class="mb-2">email</label>
+            <input [(ngModel)]="register.email"  name = "email" type="text" class=" input mb-3"  placeholder="Username"
+              required="required">
+          </div>
+          <div class="form-item">
 
-    </form>
-    <strong>You don't have and account,<a class="nav-link " routerLink='/login' aria-current="page" href="#">Register</a></strong>
-  </main>
+            <label for="password"  class="mb-2">password</label>
+            <input [(ngModel)]="register.password" name="password" type="password" class=" input mb-3"  placeholder="Password"
+              required="required">
+          </div>
+              <div class="button">
+                  <button (click)="registerUser()"
+                  [disabled]="!signupForm.valid"
+                    type="submit"  class="btn btn-success  signup-btn">
+                      Sign-up
+                  </button>
+              </div>
+
+
+        </form>
+        </form>
+
+      
+    <div class="col-md-7 ">
+      <p>Already have an account?</p>
+      <div class="button">
+       <a routerLink='/login'><button  type="submit"  class="btn btn-success  signup-btn">
+
+            Login
+        </button>
+      </a>
+    </div>
+
+    </div>
+
+

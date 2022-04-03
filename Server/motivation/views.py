@@ -115,7 +115,7 @@ def post_id(request, pk):
         post.delete() 
         return JsonResponse({'message': 'Post was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
     
-class PosList(generics.ListAPIView):
+class PostList(generics.ListAPIView):
     permission_classes = (AllowAny, )
     queryset = Post.objects.all()
     serializer_class = PostSerializer

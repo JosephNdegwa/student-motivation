@@ -1,8 +1,9 @@
-from django import forms
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import User
 from . import models
-class StaffUserManager(BaseUserManager):
+#from django.utils.translation import ugettext_lazy as _
+
+class CustomUserManager(BaseUserManager):
     def create_user(self, username, password, **extra_fields):
         if not username:
             raise ValueError(("Please input a valid username"))
