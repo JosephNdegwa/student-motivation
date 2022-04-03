@@ -108,16 +108,14 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = ('id', 'user','profile_photo','category','profile_email','phone_number', 'created_at')
-
-
+        fields = ('id', 'user','profile_photo','category', 'pub_at')
 
 
 class PostPostSerializer(serializers.ModelSerializer):
     profile=ProfileSerializer(read_only=True)
     class Meta:
         model = Post
-        fields = ('id', 'blog', 'video', 'title', 'category', 'description', 'profile', 'created_at')
+        fields = ('id', 'article', 'video', 'category', 'audio_track', 'profile', 'pub_at')
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -125,7 +123,7 @@ class PostSerializer(serializers.ModelSerializer):
     category = CategorySerializer( read_only=True)
     class Meta:
         model = Post
-        fields = ('id', 'blog', 'video', 'title', 'category', 'description', 'profile', 'pub_at')
+        fields = ('id', 'article', 'video', 'title', 'category', 'profile', 'pub_at')
 
 class ReviewSerializer(serializers.ModelSerializer):
     profile=ProfileSerializer(read_only=True)

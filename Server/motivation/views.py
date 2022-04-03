@@ -13,7 +13,6 @@ from rest_framework import status
 from .serializers import PostSerializer, PostPostSerializer, ReviewSerializer,CategorySerializer, ProfileSerializer
 from .models import  Category, Post,Review, Profile, ReviewThread,WishList
 from django.contrib.auth.decorators import user_passes_test
-from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
 #from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
@@ -26,16 +25,11 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import AllowAny, IsAuthenticated,IsAdminUser
 from .serializers import (
-    UserRegistrationSerializer,
-    UserLoginSerializer,
-    UserListSerializer,
-    ProfileSerializer,
-    SubscriptionSerializer,
-    SuperUserSerializer,
-    ActiveUserSerializer,
-    ReviewThreadSerializer,
-    WishListSerializer,
-    UserUpdateSerializer
+    UserRegistrationSerializer,UserLoginSerializer,
+    UserListSerializer,ProfileSerializer,
+    SubscriptionSerializer,SuperUserSerializer,
+    ActiveUserSerializer,ReviewThreadSerializer,
+    WishListSerializer,UserUpdateSerializer
 )
 
 from .models import StudentUser, Profile
@@ -116,7 +110,7 @@ def post_id(request, pk):
         return JsonResponse({'message': 'Post was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
     
 class PostList(generics.ListAPIView):
-    permission_classes = (AllowAny, )
+    permission_classes = ((AllowAny,) )
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     filter_backends = [DjangoFilterBackend]
@@ -256,7 +250,7 @@ def review_mot_id(request, mot_pk):
 
 class AuthUserRegistrationView(APIView):
     serializer_class = UserRegistrationSerializer
-    permission_classes = (AllowAny, )
+    permission_classes = ((AllowAny), )
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         valid = serializer.is_valid(raise_exception=True)
@@ -337,6 +331,8 @@ def all_users(request):
     if request.method == 'GET':
         serializer = UserListSerializer(users, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
     
 @api_view(['GET','PUT'])
 @permission_classes((IsAuthenticated,))
