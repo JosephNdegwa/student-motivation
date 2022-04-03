@@ -10,6 +10,10 @@ from .views import(
 )
 urlpatterns=[
     path('post/', views.post), 
+    path('api/login', AuthUserLoginView.as_view(), name='login'),
+    path('api/register', AuthUserLoginView.as_view(), name='register'),
+    path('api/user', AuthUserLoginView.as_view(), name='user'),
+    path('api/logout', AuthUserLoginView.as_view(), name='logout'),
     #path('',views.home_view,name='homeView'),
     #path('staff/',views.staffclick_view, name="staffclick"),
     #path('staff-signup', views.staff_signup_view,name='staff-signup'),
