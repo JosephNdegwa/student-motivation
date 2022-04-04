@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'student.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+           'NAME': 'motivation',
+           'USER': 'kariuki_ndegwa',
+           'PASSWORD': '515021',
+           'HOST': '127.0.0.1',
+           'PORT': '',
     }
 }
 
@@ -174,8 +178,8 @@ AUTH_USER_MODEL = "motivation.StudentUser"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-#ALLOWED_HOSTS=['localhost']    
-
+   
+#ALLOWED_HOSTS=['http://localhost:4200']  
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
