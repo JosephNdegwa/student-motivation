@@ -60,7 +60,9 @@ export class LoginComponent implements OnInit {
 
   }
    loginUser() {
-    this.auth.signIn(this.signinForm.value)
+    this.auth.signIn(this.signinForm.value),
+    this.loggedIn.next(true);
+    this.router.navigate(['motivation'])
 
   }
 }
