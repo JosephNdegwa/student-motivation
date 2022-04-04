@@ -38,6 +38,7 @@ import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
     ProfileComponent,
     ReviewThreadComponent,
     WishlistComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
