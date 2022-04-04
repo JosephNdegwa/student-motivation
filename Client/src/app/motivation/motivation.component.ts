@@ -20,7 +20,7 @@ import { TruncateModule } from 'ng2-truncate';
 export class MotivationComponent implements OnInit {
 
 
-  motivations!:Post[]
+  posts!:Post[]
   error: any;
   wishlist:any;
 
@@ -42,7 +42,7 @@ export class MotivationComponent implements OnInit {
       this.motivationService.getAllPosts().toPromise().then(
         (response:any) => {
           // console.log(response)
-        this.motivations = response;
+        this.posts = response;
         // console.log(response)
         resolve()
       },
@@ -62,7 +62,7 @@ export class MotivationComponent implements OnInit {
 
 
       alert('This motivation post has been added to wishlist'),
-      this.router.navigate(['home'])
+      this.router.navigate(['landing'])
 
     },
 
@@ -75,7 +75,7 @@ export class MotivationComponent implements OnInit {
 
 
   goToUrl(id: any){
-    this.router.navigate(['/motivation',id])
+    this.router.navigate(['/post',id])
   }
 
 

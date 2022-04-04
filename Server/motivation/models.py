@@ -43,11 +43,11 @@ class StudentUser(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = 'users'
 
 class Category(models.Model):
-    category = models.CharField(max_length=50)
+    category_name = models.CharField(max_length=50)
     pub_at = models.DateTimeField(auto_now_add=True) 
 
     def __str__(self):
-            return self.category
+            return self.category_name
 
 # profile class
 class Profile(models.Model): 
