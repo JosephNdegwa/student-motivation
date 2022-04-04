@@ -25,11 +25,7 @@ urlpatterns=[
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('api/register', AuthUserRegistrationView.as_view(), name='register'),
     path('api/login', AuthUserLoginView.as_view(), name='login'),
-<<<<<<< HEAD
-    path('api/logout',AuthLogoutView.as_view(),name='logout'),
-=======
     path('logout',AuthLogoutView.as_view(),name='logout'),
->>>>>>> 630fbb32b8490c57a7ec2af7cdd93f2bae7ceffe
     path('subscribe/<int:pk>',views.subscription_service,name='category_subscription'),
     path('api/users', views.all_users, name='users'),
     path('remove_user/<int:id>',views.remove_user,name='user_deactivate'),
