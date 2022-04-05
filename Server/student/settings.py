@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'grappelli',
     'django_filters',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -88,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': 'motivation',
-           'USER': 'moringa',
-           'PASSWORD': 'moringa',
+           'USER': 'kariuki_ndegwa',
+           'PASSWORD': '515021',
            'HOST': '127.0.0.1',
            'PORT': '',
     }

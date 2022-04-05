@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from motivation.models import StudentUser,Category,Review,Post,WishList,ReviewThread,Profile 
 
 # Register your models here.
