@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
  ]
 
 MIDDLEWARE = [
@@ -87,8 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': 'motivation',
-           'USER': 'kariuki_ndegwa',
-           'PASSWORD': '515021',
+           'USER': 'moringa',
+           'PASSWORD': 'moringa',
            'HOST': '127.0.0.1',
            'PORT': '',
     }

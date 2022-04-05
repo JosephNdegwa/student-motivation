@@ -8,7 +8,6 @@ import { MotivationComponent } from './motivation/motivation.component';
 import { RegisterComponent } from './register/register.component';
 import { SingleMotivationComponent } from './single-motivation/single-motivation.component';
 
-
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'login', component:LoginComponent},

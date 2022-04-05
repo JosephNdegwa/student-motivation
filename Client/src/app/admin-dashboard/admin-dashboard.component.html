@@ -84,10 +84,7 @@
           <div id="dashbord-student">
             <div class="user" *ngFor = 'let user of users' >
               <!-- loop users -->
-              <div class="avatar-image">
-                <img class="avatar" src="assets/pp.png" alt="">
-              </div>
-              <hr>
+               <hr>
               <small>{{user.username}}</small><br>
               <small>{{user.email}}</small>
               <div *ngIf = 'user.is_superuser; else elseBlock'>
