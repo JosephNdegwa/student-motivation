@@ -9,22 +9,6 @@ from .views import(
     AuthLogoutView,UserListView,
 )
 urlpatterns=[
-<<<<<<< HEAD
-    path('post/', views.post),
-    path('post/mot-id/<int:pk>', views.post_id, name='post_id'),
-    path('mot-cat/(?P<cat_pk>[0-9]+)', views.MotivationalByCategory.as_view()),
-    path('rev/', views.ReviewList.as_view()),
-    path('review/rev-id/(?P<pk>[0-9]+)/', views.ReviewDescription.as_view()),
-    path('category/', views.CategoryList.as_view()),
-    path('category/cat_idd/(?P<cat_pk>[0-9]+)', views.category_id),
-
-    path('review_thread/<int:id>',views.review_thread,name='review_thread'),
-    path('wishlist/<int:pk>',views.wishlist_motivation,name='wishlist'),
-    path('user_wishlist',views.all_wishlist,name='all user wishlist picks'),
-    path('profile/',views.profile, name='profile'),
-    path('token/obtain/', jwt_views.TokenObtainPairView.as_view(), name='token_create'),
-    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-=======
     path('api/post/', views.post),
     path('api/post/mot-id/<int:pk>', views.post_id, name='post_id'),
     path('api/mot-cat/(?P<cat_pk>[0-9]+)', views.MotivationalByCategory.as_view()),
@@ -38,7 +22,6 @@ urlpatterns=[
     path('api/profile/',views.profile, name='profile'),
     path('api/token/obtain/', jwt_views.TokenObtainPairView.as_view(), name='token_create'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
->>>>>>> b38a996604f13451e641b087784f3ca0c536d2d8
     path('api/register', AuthUserRegistrationView.as_view(), name='register'),
     path('api/login', AuthUserLoginView.as_view(), name='login'),
     path('api/logout',AuthLogoutView.as_view(),name='logout'),
