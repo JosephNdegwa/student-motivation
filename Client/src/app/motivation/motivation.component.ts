@@ -1,25 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Post } from 'src/app/models/post';
-import { AuthenticationService } from 'src/app/services/authentication.service';
-import { MotivationService } from 'src/app/services/motivation.service';
-import { environment } from 'src/environments/environment';
-import { TruncateModule } from 'ng2-truncate';
-
-
+import { Post } from '../models/post';
+import { AuthenticationService } from '../services/authentication.service';
+import { MotivationService } from '../services/motivation.service';
 
 @Component({
-  selector: 'app-motivation',
+  selector: 'app-client',
   templateUrl: './motivation.component.html',
   styleUrls: ['./motivation.component.css']
 })
-
-
-
 export class MotivationComponent implements OnInit {
 
-
+ 
   posts!:Post[]
   error: any;
   wishlist:any;
@@ -75,7 +68,8 @@ export class MotivationComponent implements OnInit {
 
 
   goToUrl(id: any){
-    this.router.navigate(['/post',id])
+    console.log("post_id",id)
+    this.router.navigate([`/post/${id}`])
   }
 
 
