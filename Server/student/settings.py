@@ -89,8 +89,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': 'motivation',
+<<<<<<< HEAD
            'USER': 'my_username',
            'PASSWORD': 'my_password',
+=======
+           'USER': 'moringa',
+           'PASSWORD': 'moringa',
+>>>>>>> ee35b24a4bb3ed3a1eab34cca0446b6ef6867f09
            'HOST': '127.0.0.1',
            'PORT': '',
     }
