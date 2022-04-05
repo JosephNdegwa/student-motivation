@@ -6,32 +6,41 @@
     <h1>Login</h1>
     <div class="row">
       <div class="col-md-5 login-form">
-  
+
         <form action="" class="form"  #loginForm="ngForm" [formGroup]="signinForm" (ngSubmit)="loginUser()">
           <div class="form-item">
             <label for="username">username</label>
             <input formControlName="username"  type="text"  class="input" placeholder="Username" required="required">
           </div>
-  
+
           <div class="form-item">
-  
+
             <label for="password">password</label>
             <input formControlName="password"  type="password" class="input" placeholder="Password" required="required">
-  
+
           </div>
-  
-  
-          
-            <button  type="submit" class="btn btn-success  signin-btn">Login</button>
-          
+
+
+
+            <button  type="submit" class="btn btn-success  signin-btn">Login</button><br>
+
         <p>Dont have an account?</p>
-        <a routerLink='/register'><button type="submit" class="btn btn-info  signup-btn">
+        <a routerLink='/register'><button type="submit" class="btn btn-success  signin-btn">
             Sign-up
             </button>
           </a>
-        
-  
-      
-  
-  
-  
+        </form>
+      </div>
+
+
+      <div class="col-md-7">
+        <img src="./assets/login.jpg" style="width: 90%;">
+      </div>
+      </div>
+  </div>
+
+
+
+
+
+

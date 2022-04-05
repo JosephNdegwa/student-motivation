@@ -1,9 +1,16 @@
-<div class="container-fluid signup">
+
+
+
+
+
+
+
+
+ <div class="container-fluid signup">
   <h1>Register</h1>
   <div class="row">
       <div class="col-md-5 signup-form">
         <form action="" class="form"  #signupForm="ngForm">
-        <form action="" class="form">
 
           <div class="form-item">
              <label for="username" class="mb-2">username</label>
@@ -25,24 +32,33 @@
               <div class="button">
                   <button (click)="registerUser()"
                   [disabled]="!signupForm.valid"
-                    type="submit"  class="btn btn-success  signup-btn">
+                    type="submit"  class="btn btn-success signup-btn">
                       Sign-up
                   </button>
               </div>
-
         </form>
 
-      
+
+
+  </div>
+
+
     <div class="col-md-7 ">
-      <p>Already have an account?</p>
-      <div class="button">
-       <a routerLink='/login'><button  type="submit"  class="btn btn-secondary  signup-btn">
-
-            Login
-        </button>
-      </a>
+  <img src="/assets/lo3.jpg" style="height: 90%;">
     </div>
 
+    <div class="button">
+    <p>Already have an account?</p>
+
+    <div class="button">
+     <a routerLink='/login'><button  type="submit" class="btn  signup-btn3 ">
+          Login
+      </button>
+    </a>
+  </div>
     </div>
+
+      </div>
+ </div>
 
 
