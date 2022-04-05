@@ -81,6 +81,20 @@ form .signup-btn {
   color: #FFFFFF;
 
 }
+.signup-btn3 {
+  margin-top: 40px;
+  width: 180px;
+  height: 70px;
+  background:#11284B;
+  border-radius: 50px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 54px;
+  color: #FFFFFF;
+
+}
 
 form .signup-btn:hover{
   background-color: white;
