@@ -10,7 +10,7 @@ from .views import(
 )
 urlpatterns=[
     path('api/post/', views.post),
-    path('api/post/mot-id/<int:pk>', views.post_id, name='post_id'),
+    path('api/post/mot_id/<int:pk>', views.post_id, name='post_id'),
     path('api/mot-cat/(?P<cat_pk>[0-9]+)', views.MotivationalByCategory.as_view()),
     path('api/rev/', views.ReviewList.as_view()),
     path('api/review/rev-id/(?P<pk>[0-9]+)/', views.ReviewDescription.as_view()),

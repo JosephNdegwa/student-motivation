@@ -68,7 +68,8 @@ export class MotivationComponent implements OnInit {
 
 
   goToUrl(id: any){
-    this.router.navigate(['/post',id])
+    console.log("post_id",id)
+    this.router.navigate([`/post/${id}`])
   }
 
 
