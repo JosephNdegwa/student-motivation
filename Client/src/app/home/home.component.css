@@ -18,9 +18,5 @@
  .btn1{
    background-color: #11284B;
    color: white;
- }
-
- .btn2{
-   background-color: #FE3636;
-   color: white;
+   border-radius: 50px;
  }

@@ -10,7 +10,10 @@ django-tinymce==3.4.0
 django-widget-tweaks==1.4.12
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.1.0
+<<<<<<< HEAD
+=======
 psycopg2==2.9.3
+>>>>>>> 630fbb32b8490c57a7ec2af7cdd93f2bae7ceffe
 PyJWT==2.3.0
 pytz==2022.1
 six==1.16.0
