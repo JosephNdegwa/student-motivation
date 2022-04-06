@@ -63,7 +63,7 @@ class Profile(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=260)
     article = HTMLField(blank=True)
-    video = models.FileField(blank=True,null=True)
+    video = models.FileField(upload_to='media/',blank=True,null=True)
     audio_track = models.FileField(upload_to='post/', blank=True)
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     pub_at = models.DateTimeField(auto_now_add=True)
@@ -90,7 +90,7 @@ class ReviewThread(models.Model):
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     content = models.TextField()
     review = models.ForeignKey(Review,on_delete=models.CASCADE)
-    posted_at = models.DateTimeField(auto_now_add=True)
+    pub_at = models.DateTimeField(auto_now_add=True)
 
 class Subscription(models.Model):
     user =models.ForeignKey(StudentUser,on_delete=models.CASCADE)

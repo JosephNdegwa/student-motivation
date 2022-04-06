@@ -6,21 +6,22 @@
     <div class="col-md-3 mt-4" *ngFor="let post of posts">
   
       <div class="card mb-3">
-        <div *ngIf="post.image == null && post.video == null ">
+        <div *ngIf="post.audio_track == null && post.video == null ">
         </div>
         <div *ngIf="post?.video" class="video-icon">
           <div class="col-md-8">
-            <img src="assets/vid-icon.png" class="card-img-top" alt="Video" (click)='goToUrl(post.id)' height="300">
+            <video controls #videoPlayer class="card-img-top" alt="Video" (click)='goToUrl(post.id)' height="200">
+            </video>
   
           </div>
         </div>
         <div class="card-body ">
           <h5 class="card-title">{{post.title}}</h5>
           <p class="card-text">Category:{{post.category.category_name}}</p>
-          <p class="card-text small">{{post.description| words : 6}}</p>
+          <p class="card-text small">{{post.article| words : 500}}</p>
   
           <p class="card-text"><small class="">published by {{post.profile.user}}</small></p>
-          <p class="card-text"><small class="">{{post.created_at|date}}</small></p>
+          <p class="card-text"><small class="">{{post.pub_at|date}}</small></p>
         </div>
         <div class="card-footer">
           <div class="icons d-flex">

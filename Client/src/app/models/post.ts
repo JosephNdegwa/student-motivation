@@ -4,12 +4,13 @@ export class Post {
   id: any;
   constructor(
     public image: string,
-    public video: string,
+    public video: File,
+    public audio_track:File,
     public title: string,
     public category: Category,
-    public description: string,
+    public article: string,
     public profile:Profile,
-    public created_at:Date,
+    public pub_at:Date,
 
 
     )

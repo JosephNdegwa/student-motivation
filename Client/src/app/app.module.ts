@@ -20,7 +20,7 @@ import { InterceptorInterceptor } from './Auth/interceptor.interceptor';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 //import { AuthInterceptor } from './services/authconfig.interceptors';
 import { TruncateModule } from 'ng2-truncate';
-
+import { SingleMotivationComponent } from './single-motivation/single-motivation.component';
 import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
 
 
@@ -38,6 +38,7 @@ import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
     ProfileComponent,
     ReviewThreadComponent,
     WishlistComponent,
+    SingleMotivationComponent
   ],
   imports: [
     BrowserModule,

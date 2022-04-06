@@ -10,7 +10,6 @@ import { UsersService } from 'src/app/services/users.service';
 import { ReviewService } from 'src/app/services/review.service';
 import { ProfileService } from 'src/app/services/profile.service';
 
-
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
@@ -64,19 +63,55 @@ export class AdminDashboardComponent implements OnInit {
     
 
   }
-  get_posts() {
-    throw new Error('Method not implemented.');
+ 
+  get_users() {
+    $('#dashbord-body').fadeOut()
+    $('#dashbord-categories').fadeOut()
+    $('#dashbord-posts').fadeOut()
+    $('#dashbord-admins').fadeOut()
+    $('#dashbord-student').show()
+    this.userService.getUsers().subscribe((response: any) => {
+      this.users = response
+      console.log(response)
+    })
   }
-  get_admin() {
-    throw new Error('Method not implemented.');
+  get_posts() {
+    $('#dashbord-body').fadeOut()
+    $('#dashbord-posts').fadeIn()
+    $('#dashbord-categories').fadeOut()
+    $('#dashbord-student').fadeOut()
+    $('#dashbord-admins').fadeOut()
+
   }
   get_categories() {
-    throw new Error('Method not implemented.');
-  }
-  get_users() {
-    throw new Error('Method not implemented.');
-  }
+    
+    $('#dashbord-body').fadeOut()
+    $('#dashbord-student').fadeOut()
+    $('#dashbord-posts').fadeOut()
+    $('#dashbord-admins').fadeOut()
+    $('#dashbord-categories').fadeIn()
+    this.categoryService.getAllCategories().subscribe((response: any) => {
+      this.categories = response
+      // console.log(response)
+      // console.log(this.categories.length)
+    })
 
+
+  }
+  get_admin() {
+    $('#dashbord-body').fadeIn()
+    $('#dashbord-student').fadeOut()
+    $('#dashbord-posts').fadeOut()
+    $('#dashbord-categories').fadeOut()
+    $('#dashbord-admins').fadeOut()
+  }
+  get_adm() {
+    $('#dashbord-body').fadeOut()
+    $('#dashbord-student').fadeOut()
+    $('#dashbord-posts').fadeOut()
+    $('#dashbord-categories').fadeOut()
+    $('#dashbord-admins').show()
+  }
   
   deletePost(post: any) {
     this.posts.splice(post, 1)

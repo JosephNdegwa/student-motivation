@@ -10,7 +10,7 @@ export class Profile {
     public phone_number: string,
     public profile_email: string,
     public category: Category,
-    public created_at:Date,
+    public pub_at:Date,
 
 
     )

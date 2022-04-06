@@ -28,10 +28,10 @@ export class NavbarComponent implements OnInit {
   newCat: any;
   file: any;
   filePath: any;
-  image!: File;
+  audio_track!: File;
   video!: File;
   title!: string;
-  description!: string;
+  article!: string;
   category!: any;
 
 
@@ -42,9 +42,6 @@ export class NavbarComponent implements OnInit {
     private profService: ProfileService,
     private motivationService: MotivationService,
     private router: Router,
-    // private cloudinary: Cloudinary,
-    // private zone: NgZone,
-    // private hasBaseDropZoneOver: boolean = false;
 
     )
     { }
@@ -109,15 +106,15 @@ export class NavbarComponent implements OnInit {
    }
 
    descriptionChange(event:any){
-    this.description = event.target.value;
-    console.log(this.description)
+    this. article= event.target.value;
+    console.log(this.article)
 
 
    }
 
 
  imageUpload(event:any){
-   this.image = event.target.files[0];
+   this.audio_track = event.target.files[0];
 
   }
 
@@ -137,8 +134,8 @@ export class NavbarComponent implements OnInit {
 
     const uploadData = new FormData()
     uploadData.append('title', this.title)
-    uploadData.append('description', this.description)
-    uploadData.append('image', this.image)
+    uploadData.append('article', this.article)
+    uploadData.append('video', this.video)
     // uploadData.append('video', this.video)
     uploadData.append('category', this.category)
 
