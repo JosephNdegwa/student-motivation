@@ -55,7 +55,7 @@ export class MotivationComponent implements OnInit {
 
 
       alert('This motivation post has been added to wishlist'),
-      this.router.navigate(['landing'])
+      this.router.navigate(['motivation'])
 
     },
 
@@ -68,8 +68,7 @@ export class MotivationComponent implements OnInit {
 
 
   goToUrl(id: any){
-    console.log("post_id",id)
-    this.router.navigate([`/post/${id}`])
+    this.router.navigate(['/post',id])
   }
 
 

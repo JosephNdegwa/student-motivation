@@ -16,10 +16,9 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'landing', component:LandingComponent},
-  {path: 'motivation', component:MotivationComponent},
-  {path: 'single-motivation', component:SingleMotivationComponent},
-  {path: 'admin-dashboard', component:AdminDashboardComponent},
-  {path: 'profile', component:ProfileComponent},
+  {path: 'motivation', component:MotivationComponent, canActivate: [AuthGuard] },
+  {path: 'admin-dashboard', component:AdminDashboardComponent, canActivate: [AuthGuard]},
+  {path: 'profile', component:ProfileComponent, canActivate: [AuthGuard] },
   {path: 'review/:id', component:ReviewThreadComponent,canActivate: [AuthGuard] },
 
   { path: 'post/:id', component: SingleMotivationComponent,canActivate: [AuthGuard] },

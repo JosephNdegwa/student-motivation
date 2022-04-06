@@ -7,6 +7,8 @@ export class Review {
       public reviewed_by: string,
       public reviewed_on: Date,
       public review:string,
+      public video: File,
+    public audio_track:File,
   
     )
     {

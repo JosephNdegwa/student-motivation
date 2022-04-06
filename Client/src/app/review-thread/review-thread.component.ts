@@ -72,7 +72,7 @@ export class ReviewThreadComponent implements OnInit {
     this.reviewService.postReviewThread(this.reviewPost, id).subscribe( response => {
       console.log(response)
       // this.loggedIn.next(true);
-      this.router.navigate([`motivation/${id}`])
+      this.router.navigate([`post/${id}`])
 
     },
 

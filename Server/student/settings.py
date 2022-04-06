@@ -89,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': 'motivation',
-           'USER': 'my_username',
-           'PASSWORD': 'my_password',
+           'USER': 'kariuki_ndegwa',
+           'PASSWORD': '515021',
            'HOST': '127.0.0.1',
            'PORT': '',
     }
@@ -172,8 +172,18 @@ CORS_ALLOWED_ORIGINS = [
 ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-STATIC_URL = 'static/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+VENV_PATH = os.path.dirname(BASE_DIR)
+STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static"),
+]
 
 AUTH_USER_MODEL = "motivation.StudentUser"
 

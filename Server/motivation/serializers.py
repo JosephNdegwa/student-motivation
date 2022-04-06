@@ -156,7 +156,7 @@ class ReviewThreadSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer(read_only=True)
     class Meta:
         model = ReviewThread
-        fields = ('id','review','profile','content','posted_at')
+        fields = ('id','review','profile','content','pub_at')
 
 
 class WishListSerializer(serializers.ModelSerializer):

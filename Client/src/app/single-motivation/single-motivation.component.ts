@@ -19,7 +19,6 @@ export class SingleMotivationComponent implements OnInit {
   reviewPost:any;
   reviews: any;
   thread:any;
-  hideme!: {};
 
 
 
@@ -38,6 +37,7 @@ export class SingleMotivationComponent implements OnInit {
   ngOnInit(){
 
     this.reviewPost = {};
+   
 
 
     let id = this.route.snapshot.paramMap.get('id');
@@ -46,7 +46,7 @@ export class SingleMotivationComponent implements OnInit {
       this.motivationService.getSinglePost(id).toPromise().then(
         (response:any) => {
           // console.log(response)
-        this.post = response;
+        this.post= response;
         resolve()
       },
 
@@ -70,11 +70,7 @@ export class SingleMotivationComponent implements OnInit {
 
 
 
-    // Jquery
-     
-
-   
-
+    
 
 
 
@@ -121,7 +117,7 @@ export class SingleMotivationComponent implements OnInit {
     this.reviewService.postReviewThread(this.reviewPost, id).subscribe( response => {
       console.log(response)
       // this.loggedIn.next(true);
-      this.router.navigate([`motivation/${id}`])
+      this.router.navigate([`post/${id}`])
 
     },
 

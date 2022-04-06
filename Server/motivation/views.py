@@ -398,7 +398,7 @@ def review_thread(request,id):
     user = request.user
 
     review = Review.objects.filter(id=id).first()
-    found_thread = ReviewThread.objects.filter(review=review).order_by('-posted_at')
+    found_thread = ReviewThread.objects.filter(review=review).order_by('pub_at')
     if request.method == 'GET':
         serializer = ReviewThreadSerializer(found_thread,many=True)
         return Response(serializer.data,status = status.HTTP_200_OK)
