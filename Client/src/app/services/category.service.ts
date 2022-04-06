@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriesService {
+export class CategoryService {
 
   url = environment.URL
 

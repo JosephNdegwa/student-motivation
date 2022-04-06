@@ -483,7 +483,7 @@ def wishlist_motivation(request,pk):
         if new_wish_serializer.is_valid():
             new_wish_serializer.save(    
             profile = Profile.objects.filter(user=user).first(),
-            motivation = Post.objects.get(pk=pk)
+            post = Post.objects.get(pk=pk)
             )
             return Response(new_wish_serializer.data,status = status.HTTP_200_OK)
         else:

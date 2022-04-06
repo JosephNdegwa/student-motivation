@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { ReviewThreadComponent } from './review-thread/review-thread.component';
 import { SingleMotivationComponent } from './single-motivation/single-motivation.component';
 import { AuthGuard } from './authguard/auth.guard';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -20,9 +21,9 @@ const routes: Routes = [
   {path: 'admin-dashboard', component:AdminDashboardComponent, canActivate: [AuthGuard]},
   {path: 'profile', component:ProfileComponent, canActivate: [AuthGuard] },
   {path: 'review/:id', component:ReviewThreadComponent,canActivate: [AuthGuard] },
-
+  {path: 'wishlist', component: WishlistComponent},
   { path: 'post/:id', component: SingleMotivationComponent,canActivate: [AuthGuard] },
-
+  { path: '', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({

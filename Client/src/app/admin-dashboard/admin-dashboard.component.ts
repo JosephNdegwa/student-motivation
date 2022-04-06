@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import {Component,OnInit} from '@angular/core';
 import { MotivationService } from 'src/app/services/motivation.service';
-import { CategoriesService } from 'src/app/services/category.service';
+import { CategoryService } from 'src/app/services/category.service';
 import { Post } from 'src/app/models/post';
 import { Category } from 'src/app/models/category';
 import { Review } from 'src/app/models/review';
@@ -18,7 +18,7 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class AdminDashboardComponent implements OnInit {
   constructor(private http: HttpClient, private motivationService: MotivationService,
     private userService: UsersService,
-    private categoryService: CategoriesService,
+    private categoryService: CategoryService,
     private review: ReviewService,
   ) {}
 
@@ -134,8 +134,8 @@ export class AdminDashboardComponent implements OnInit {
   }
   onSubmit() {
     this.categoryService.addCategory(this.categoryModel)
-      .subscribe(data => console.log('success', data),
-        error => console.log('error', error)
+      .subscribe((data: any) => console.log('success', data),
+        (        error: any) => console.log('error', error)
       )
     console.log(this.categoryModel)
     location.reload()

@@ -111,6 +111,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = ('id', 'user','profile_photo','category', 'pub_at')
 
 
+
 class PostPostSerializer(serializers.ModelSerializer):
     profile=ProfileSerializer(read_only=True)
     class Meta:
@@ -166,3 +167,4 @@ class WishListSerializer(serializers.ModelSerializer):
     class Meta:
         model = WishList
         fields = ('profile','post')
+
