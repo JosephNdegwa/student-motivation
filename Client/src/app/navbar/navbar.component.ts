@@ -74,7 +74,6 @@ export class NavbarComponent implements OnInit {
 
   this.authBackup.getCurrentUser().pipe(first()).subscribe((loggedUser: StudentUser) => {
     this.currentUser = loggedUser;
-    // console.log(loggedUser)
   });
 
 
@@ -164,7 +163,7 @@ export class NavbarComponent implements OnInit {
 
 
   isLogout(){
-    this.authBackup.Logout();
+    this.router.navigate(['/'])
 
   }
 
