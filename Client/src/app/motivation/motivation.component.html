@@ -19,7 +19,7 @@
     <div class="card-body ">
       <h5 class="card-title">{{post.title}}</h5>
       <p class="card-text">Category:{{post.category.category_name}}</p>
-      <p class="card-text small">{{post.article| words : 500}}</p>
+      <p class="card-text small">{{post.article| words : 10}}</p>
 
       <p class="card-text"><small class="">published by {{post.profile.user}}</small></p>
       <p class="card-text"><small class="">{{post.pub_at|date}}</small></p>
