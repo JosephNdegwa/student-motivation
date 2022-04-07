@@ -3,8 +3,8 @@
 </section>
 <app-landing></app-landing>
 
-<div class="row" >
-<div class="col-md-3 mt-4" *ngFor="let post of posts">
+<div class="row" id="main" >
+<div class="col-md-3" *ngFor="let post of posts">
 
   <div class="card mb-3">
     <div *ngIf="post.audio_track == null && post.video == null ">
@@ -20,7 +20,7 @@
     <div class="card-footer">
       <div class="icons d-flex">
         <div class="wishlist">
-          <button class=" view-details btn btn-info"  (click)="addWishlist(post.id)" >Add to wishlist
+          <button class=" view-details btn "  (click)="addWishlist(post.id)" >Add to wishlist
             <i class="fas fa-save " ></i>
           </button>
         </div>

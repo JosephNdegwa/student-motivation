@@ -18,13 +18,10 @@
   
             <div class="col-md-3" *ngFor="let wishlist of wishlist">
               <div class="card mb-3">
-              <div *ngIf="wishlist.post.image == null && wishlist.post.video == null ">
+              <div *ngIf="wishlist.post.audio_track == null && wishlist.post.video == null ">
                 <img src="assets/post.jpg" class="card-img-top" alt="" height="300">
               </div>
               <div *ngIf="wishlist.post.image">
-                <!-- <img [src]="post.image" class="card-img-top" alt="image " height="300"> -->
-                <img src="https://res.cloudinary.com/kenya12254/{{wishlist.post.image}}" class="card-img-top vid-link" alt="..." height="300">
-  
               </div>
               <div *ngIf="wishlist.post?.video" class="video-icon">
                 <div class="col-md-8">
@@ -35,7 +32,7 @@
             <div class="card-body ">
               <h5 class="card-title">{{wishlist.post.title}}</h5>
               <p class="card-text">Category: {{wishlist.post.category.category_name}}</p>
-              <p class="card-text small">{{wishlist.post.article| words : 500}}</p>
+              <p class="card-text small">{{wishlist.post.article| words : 10}}</p>
   
               <p class="card-text"><small class="">published by {{wishlist.profile.user}}</small></p>
               <p class="card-text"><small class="">{{wishlist.post.pub_at|date}}</small></p>

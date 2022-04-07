@@ -15,6 +15,8 @@ from pathlib import Path
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1^y19c0%26mz$mb^qr!8x831(zde^7-=51sd1s0slqit5k$0vv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -89,8 +91,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': 'motivation',
-           'USER': 'my_username',
-           'PASSWORD': 'my_password',
+           'USER': 'kariuki_ndegwa',
+           'PASSWORD': '515021',
            'HOST': '127.0.0.1',
            'PORT': '',
     }

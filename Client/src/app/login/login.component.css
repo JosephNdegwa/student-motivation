@@ -174,8 +174,8 @@
     }
     .input {
   
-      width: 100%;
-      height: 80px;
+      width: 50%;
+      height: 50px;
       background: #FFFFFF;
       border: 2px solid  #11284B;
       box-sizing: border-box;
@@ -189,7 +189,7 @@
     }
   
     form .signin-btn {
-      width: 170px;
+      width: 100px;
       height: 65px;
       background:  #11284B;
       border-radius: 50px;

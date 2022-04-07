@@ -26,7 +26,7 @@
   
   
     #profile{
-      background-color: #11284B !important;
+      background-color: #11510F !important;
       height: auto;
     }
   
@@ -46,7 +46,7 @@
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     #profile{
-      background-color: #11284B !important;
+      background-color: #11510F !important;
       height: auto;
     }
   
@@ -69,3 +69,12 @@
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {}
   /*  */
+
+  #main{
+    background-color: #11510F;
+  }
+
+.update-btn{
+  background-color: #11284B;
+  color: white;
+}

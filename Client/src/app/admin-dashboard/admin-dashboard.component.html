@@ -5,14 +5,7 @@
     <!-- Nav section -->
     <section id="top-row">
   
-      <nav class="navbar navbar-light fixed-top" style="background-color: #11284B;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/" style="color: white;"> <i class="fas fa-graduation-cap"></i> Motiversity</a>
-          <div class="d-flex">
-            <a href="motivation" style="color: white;"><button class="btn btn-outline-success">Motivation</button></a>
-          </div>
-        </div>
-      </nav>
+      <app-navbar></app-navbar>
     </section>
     <section id="bar">
       <div class="row">
@@ -21,7 +14,7 @@
               <div class="dashbord">
                 <div class="students">
                 </div>
-                <h5 (click)='get_admin()' pt=4 class='text-center '><i class="fas fa-home"></i> Dashboard</h5>
+                <h5 style="color: white;" (click)='get_admin()' pt=4 class='text-center '><i class="fas fa-home"></i> Dashboard</h5>
               </div>
               <div class="row-cats">
                 <div class="students">
