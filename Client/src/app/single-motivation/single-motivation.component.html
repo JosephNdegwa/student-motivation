@@ -2,19 +2,19 @@
 <div class="container-fluid mt-5" id="main">
   <section id="nav">
   </section>
-
-
-
   <div class="container-fluid post">
-
     <!-- post -->
     <div class="col-md-9">
       <div class="card mb-3">
         <div *ngIf="post?.audio_track">
-          <audio controls #audioPlayer>
+          <audio controls>
             <source src="http://127.0.0.1:8000/api{{post.audio_track}}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
+          <!-- <audio controls width="auto" height="auto">
+            <source src="http://127.0.0.1:8000/api{{post.audio_track}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio> -->
         </div>
         <div *ngIf="post?.video">
           <div class="video">

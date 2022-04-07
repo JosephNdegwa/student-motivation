@@ -63,6 +63,7 @@ class Profile(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=260)
     article = HTMLField(blank=True)
+    image = CloudinaryField('images', blank=True,null=True)
     video = models.FileField(upload_to='media/',blank=True,null=True)
     audio_track = models.FileField(upload_to='post/', blank=True)
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
