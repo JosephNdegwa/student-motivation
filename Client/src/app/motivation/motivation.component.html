@@ -9,13 +9,6 @@
   <div class="card mb-3">
     <div *ngIf="post.audio_track == null && post.video == null ">
     </div>
-    <div *ngIf="post?.video" class="video-icon">
-      <div class="col-md-8">
-        <video controls #videoPlayer class="card-img-top" alt="Video" (click)='goToUrl(post.id)' height="200">
-        </video>
-
-      </div>
-    </div>
     <div class="card-body ">
       <h5 class="card-title">{{post.title}}</h5>
       <p class="card-text">Category:{{post.category.category_name}}</p>
