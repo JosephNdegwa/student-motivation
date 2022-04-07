@@ -65,7 +65,7 @@ class Post(models.Model):
     article = HTMLField(blank=True)
     image = CloudinaryField('images', blank=True,null=True)
     video = models.FileField(upload_to='media/',blank=True,null=True)
-    audio_track = models.FileField(upload_to='post/', blank=True)
+    audio_track = models.FileField(upload_to='media/', blank=True)
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     pub_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,null=True,blank=True)
