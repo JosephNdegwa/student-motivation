@@ -1,7 +1,6 @@
 /* UTILITIES */
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
    }
    body {
@@ -14,15 +13,21 @@
     list-style: none;
    }
 
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 5px;
+    border-radius: 50%;
 
+
+}
 
    /* NAVBAR STYLING STARTS */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color:#11284B;
+    background-color:#11510F;
     color: #fff;
    }
    .nav-links a {
