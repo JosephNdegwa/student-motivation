@@ -11,6 +11,7 @@ import { ReviewThreadComponent } from './review-thread/review-thread.component';
 import { SingleMotivationComponent } from './single-motivation/single-motivation.component';
 import { AuthGuard } from './authguard/auth.guard';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { FilterCategoryComponent } from './filter-category/filter-category.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'wishlist', component: WishlistComponent},
   { path: 'post/:id', component: SingleMotivationComponent,canActivate: [AuthGuard] },
   { path: '', redirectTo: '', pathMatch: 'full' },
+  {path: 'category/:id',component:FilterCategoryComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
