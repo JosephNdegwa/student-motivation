@@ -11,18 +11,18 @@
   <!-- NAVIGATION MENUS -->
   <div class="menu">
     <li class="nav-item"  *ngIf="currentUser.is_superuser">
-      <a class="nav-link active" aria-current="page" style="color: white;" href="/admin-dashboard">Admin</a>
+      <a class="nav-link active" aria-current="page"  href="/admin-dashboard">Admin</a>
     </li>
     <li class="nav-item "
-    style="color: white;" >{{currentUser.username}}
+    >{{currentUser.username}}
  </li>
  <li class="nav-item">
-  <a class="nav-link "href="profile" style="color: white;">Profile</a>
+  <a class="nav-link "href="profile" >Profile</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link " href="wishlist" style="color: white;">WishList</a></li>
+  <a class="nav-link " href="wishlist" >WishList</a></li>
   <li class="nav-item">
-    <a class="nav-link " (click)="isLogout()" style="color: white;">Logout</a></li>
+    <a class="nav-link " (click)="isLogout()" >Logout</a></li>
   </div>
   </ul>
   </nav>
