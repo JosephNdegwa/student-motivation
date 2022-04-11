@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quintessential&family=Righteous&family=Roboto+Mono:ital,wght@1,300;1,500;1,700&display=swap');
+
+
+
+
 body{
   background-image: url("./assets/martin-shreder-5Xwaj9gaR0g-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  /* font-family: 'Fredoka',
+  sans-serif; */
+  font-family: 'Quintessential',
+  cursive;
+  /* font-family: 'Righteous',
+  cursive;
+  font-family: 'Roboto Mono',
+  monospace;  */
 }
 
 .form-signin {
