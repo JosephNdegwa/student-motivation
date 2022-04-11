@@ -14,8 +14,8 @@
    }
 
 .logo{
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     margin-left: 5px;
     border-radius: 50%;
 
@@ -27,13 +27,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-     background-color: green;
+     background-color: #11284B;
     color: white;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    height: 15%;
+    height: 9%;
     z-index: 1000;
      /* color: #1D5110; */
    }
