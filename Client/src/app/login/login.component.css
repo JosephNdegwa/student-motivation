@@ -7,16 +7,16 @@
     line-height: 100px;
     text-align: center;
     color: #11284B;
-  
-  
-  
+
+
+
   }
-  
+
   .login-form {
     display: flex;
     justify-content: center;
   }
-  
+
   .form {
     margin-top: 5% !important;
     margin: 5px;
@@ -24,27 +24,27 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .form-item{
     display: flex;
     flex-direction: column;
   }
   .input {
-  
+
     width: 100%;
     height: 80px;
     background: #FFFFFF;
     border: 2px solid  #11284B;
     box-sizing: border-box;
     border-radius: 10px;
-  
+
   }
-  
+
   form .button{
     display: flex;
     justify-content: center;
   }
-  
+
   form .signin-btn {
     margin-top: 10%;
     width: 200px;
@@ -57,48 +57,49 @@
     font-size: 29px;
     line-height: 54px;
     color: #FFFFFF;
-  
-  
-  
+
+
+
   }
-  
+
   form .signin-btn:hover{
     background-color: white;
     color:  #11284B;
     border: 4px solid #11284B;
-  
+
   }
-  
+
   label {
     margin-top: 7%;
     margin-bottom: 5px;
-  
+
     width: 71px;
     height: 36px;
-  
+
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 36px;
-    color:  #11284B;
-  
-  
+    /* color:  #11284B; */
+    color: white;
+
+
   }
-  
+
   .login-image {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .login-image img {
     width: 70%;
     height: 601px;
-  
-  
+
+
   }
-  
+
   .login-image p {
     font-family: Poppins;
     font-style: normal;
@@ -106,14 +107,14 @@
     font-size: 25px;
     line-height: 72px;
     text-align: center;
-  
+
     color: #11284B;
-  
-  
+
+
   }
-  
+
   .login-image .signup-btn {
-  
+
     width: 180px;
     height: 65px;
     background: #FFFFFF;
@@ -126,21 +127,21 @@
     font-size: 24px;
     line-height: 36px;
     color:  #11284B;
-  
-  
+
+
   }
-  
+
   .login-image .signup-btn:hover{
     background-color:  #11284B;
     color: white;
   }
-  
-  
-  
+
+
+
   /* RESPONSIVENESS */
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-  
+
     .login h1 {
       text-align: center;
       font-family: Poppins;
@@ -150,16 +151,16 @@
       line-height: 100px;
       text-align: center;
       color:  #11284B;
-  
-  
-  
+
+
+
     }
-  
+
     .login-form {
       display: flex;
       justify-content: center;
     }
-  
+
     .form {
       margin-top: 5% !important;
       margin: 5px;
@@ -167,27 +168,27 @@
       display: flex;
       flex-direction: column;
     }
-  
+
     .form-item{
       display: flex;
       flex-direction: column;
     }
     .input {
-  
+
       width: 50%;
       height: 50px;
       background: #FFFFFF;
       border: 2px solid  #11284B;
       box-sizing: border-box;
       border-radius: 10px;
-  
+
     }
-  
+
     form .button{
       display: flex;
       justify-content: center;
     }
-  
+
     form .signin-btn {
       width: 100px;
       height: 65px;
@@ -198,62 +199,62 @@
       font-weight: bold;
       font-size: 18px;
       color: #FFFFFF;
-  
-  
-  
+
+
+
     }
-  
+
     form .signin-btn:hover{
       background-color: white;
       color:  #11284B;
       border: 4px solid  #11284B;
-  
+
     }
-  
+
     label {
       margin-top: 7%;
       margin-bottom: 5px;
-  
+
       width: 71px;
       height: 36px;
-  
+
       font-family: Poppins;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
       line-height: 36px;
       color:  #11284B;
-  
-  
+
+
     }
-  
+
     .login-image {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-  
+
     .login-image img {
       width: 70%;
       height: 300px;
-  
-  
+
+
     }
-  
+
     .login-image p {
       font-family: Poppins;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
       text-align: center;
-  
+
       color:  #11284B;
-  
-  
+
+
     }
-  
+
     .login-image .signup-btn {
-  
+
       width: 130px;
       height: 50px;
       background: #FFFFFF;
@@ -266,38 +267,38 @@
       font-size: 20px;
       color: #11284B;
       margin-bottom: 5%;
-  
-  
+
+
     }
-  
+
     .login-image .signup-btn:hover{
       background-color:  #11284B;
       color: white;
     }
-  
-  
- 
+
+
+
   }
-  
-  
-  
-  
-  
-   
+
+
+
+
+
+
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px)and (max-width:991px){
-  
-  
-  
+
+
+
   }
-  
+
   /* Medium devices (landscape tablets, 768px and up) .. */
   @media only screen and (min-width: 768px) {}
-  
+
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-  
+
   }
-  
+
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {}
