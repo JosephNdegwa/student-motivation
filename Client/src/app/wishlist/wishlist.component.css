@@ -1,18 +1,24 @@
 #main{
-    background-color:#11510F!important;
+    /* background-color:#11510F!important; */
     padding-left: 3%;
+    margin-top: 100px;
+    /* height: 100vh; */
   }
-  
+
   .motivations{
     margin-top: 5px;
     background-color: rgba(211, 202, 185, 0.5) !important;
-  
-  
+
+
   }
-  
-  
-  
-  
+h5{
+  color: green;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+
+
   .categories{
      margin: 0 auto
   }
@@ -33,118 +39,119 @@
     color: #fff !important;
     border: 1px solid #fff !important;
   }
-  
+
   .view-comment{
     text-decoration: none;
     font-weight: 800;
     color: #fff;
   }
-  
+
   .card{
     margin-top: 5%;
-     background-color: rgba(22, 54, 80, 0.5) !important;
+     /* background-color: rgba(22, 54, 80, 0.5) !important; */
+     background-color:green ;
     color: aliceblue;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  
-  
+
+
   }
-  
+
   .card:hover{
-    filter:drop-shadow(8px 8px 10px rgb(19, 19, 19));
+   background-color: green;
   }
-  
+
   .card-body{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  
+
   }
-  
+
   .card-footer{
     display: flex;
     justify-content: space-between;
   }
-  
+
   .vid-link:hover{
     cursor: pointer;
   }
-  
+
   i{
     padding: 0.5rem;
     color:#11284B;
   }
-  
+
   .motivation-loop{
     display: flex;
   }
-  
+
   .video-icon{
     display: flex;
     justify-content: center;
   }
-  
+
   .custom{
     background-color:rgb(164, 180, 185) !important;
     color: rgb(16, 20, 9) !important;
     border-radius: 25px;
     border:  1px solid rgb(11, 36, 28);
   }
-  
+
   .custom:hover{
     background-color:#11284B !important;
     color: aliceblue !important;
     border:  1px solid #11284B;
-  
+
   }
-  
+
   .view-details{
     background-color:rgb(164, 180, 185) !important;
     color: rgb(16, 20, 9) !important;
     border-radius: 25px;
     border:  1px solid #11284B;
   }
-  
-  
-  
+
+
+
   .all-btn{
     background-color:rgba(189, 214, 192, 0.9) !important;
     color: rgb(21, 8, 56) !important;
   }
-  
+
   .subscribe{
     display: flex;
     justify-content: center;
     margin: 5px;
   }
-  
+
   .goToUrl{
     background-color:rgb(164, 180, 185) !important;
     color: rgb(16, 20, 9) !important;
     border-radius: 25px;
     border:  1px solid rgb(11, 36, 28);
   }
-  
+
   .goToUrl:hover{
     background-color:#11284B !important;
     color: aliceblue !important;
     border:  1px solid #11284B;
-  
+
   }
-  
+
   .fas, .fab{
     font-size: 20px;
   }
   .fas:hover{
     cursor: pointer;
   }
-  
-  
+
+
   .wishlist, .whatsapp  .fb{
     position: relative;
     display: inline-block;
   }
-  
+
   .wishlisttext, .whatsappshare, .fbshare{
     visibility: hidden;
     width: 120px;
@@ -153,21 +160,21 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-  
+
      position: absolute;
     z-index: 1;
     top: -45px;
    }
-  
+
   .wishlist:hover .wishlisttext {
     visibility: visible;
   }
-  
+
   .whatsapp:hover .whatsappshare {
     visibility: visible;
   }
-  
-  
+
+
   .fb:hover .fbshare {
     visibility: visible;
   }

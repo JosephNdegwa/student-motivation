@@ -1,11 +1,16 @@
 .card{
-  margin-top: 5%;
+  margin-top: 10%;
+  margin-left: 2px;
   border-radius: 5px;
-  background-color:rgb(69, 75, 64) !important;
-  color: aliceblue;
+  background-color: #11284B;
+  color:white;
   box-shadow:  0 4px 8px 0 rgb(185, 177, 177);
 
 
+
+}
+.card:hover{
+   background-color:green
 
 }
 
@@ -13,7 +18,7 @@
   background-color:rgba(189, 214, 192, 0.9) !important;
   color: #11284B !important;
 }
- 
+
 .card-body{
   display: flex;
   flex-direction: column;
@@ -27,7 +32,7 @@
   justify-content: space-between;
 }
 
- 
+
 i{
   padding: 0.5rem;
   color:white;
@@ -57,7 +62,7 @@ i{
   border: 1px solid #fff !important;
 
 }
-
+/*
 #main{
-  background-color: #11510F;
-}
+  /* background-color: #97B038; 
+} */

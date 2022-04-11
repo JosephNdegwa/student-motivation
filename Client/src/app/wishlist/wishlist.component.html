@@ -6,16 +6,16 @@
       </section>
       <!-- category looping -->
       <div class="container">
-        <h5 class="text-center text-white">My WishList</h5>
-  
-  
+        <h5 class="text-center">My WishList</h5>
+
+
       </div>
-  
+
       <div class="container-fluid posts" id="post">
-  
+
         <!-- post looping -->
           <div class="row" >
-  
+
             <div class="col-md-3" *ngFor="let wishlist of wishlist">
               <div class="card mb-3">
               <div *ngIf="wishlist.post.audio_track == null && wishlist.post.video == null ">
@@ -26,48 +26,48 @@
               <div *ngIf="wishlist.post?.video" class="video-icon">
                 <div class="col-md-8">
                   <img src="assets/vid-icon.png" class="card-img-top" alt="Video" (click)='goToUrl(wishlist.post.id)' height="300">
-  
+
                 </div>
               </div>
             <div class="card-body ">
               <h5 class="card-title">{{wishlist.post.title}}</h5>
               <p class="card-text">Category: {{wishlist.post.category.category_name}}</p>
               <p class="card-text small">{{wishlist.post.article| words : 10}}</p>
-  
+
               <p class="card-text"><small class="">published by {{wishlist.profile.user}}</small></p>
               <p class="card-text"><small class="">{{wishlist.post.pub_at|date}}</small></p>
-  
+
               <!-- {{post.created_at}} -->
             </div>
-  
-            
-  
-            
+
+
+
+
               <div class="details">
                   <button (click)='goToUrl(wishlist.post.id)' class=" custom btn btn-info">View Details</button>
-  
+
               </div>
-  
+
             </div>
           </div>
           </div>
-  
-  
+
+
         </div>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
       </div>
-  
-  
-  
+
+
+
     </div>
-  
+
   <div class="dynamic-style" *ngIf="wishlist.length>4">
-  
+
     <div class="container-fluid" id="main">
       <section id="nav">
         <app-navbar></app-navbar>
@@ -75,15 +75,15 @@
       <!-- category looping -->
       <div class="container">
         <h5 class="text-center text-white">My WishList</h5>
-  
-  
+
+
       </div>
-  
+
       <div class="container-fluid posts" id="post">
-  
+
         <!-- post looping -->
           <div class="row" >
-  
+
             <div class="col-md-3" *ngFor="let wishlist of wishlist">
               <div class="card mb-3">
               <div *ngIf="wishlist.post.image == null && wishlist.post.video == null ">
@@ -91,25 +91,25 @@
               </div>
               <div *ngIf="wishlist.post.image">
                   <img src="https://res.cloudinary.com/kenya12254/{{wishlist.post.image}}" class="card-img-top vid-link" alt="..." height="300">
-  
+
               </div>
               <div *ngIf="wishlist.post?.video" class="video-icon">
                 <div class="col-md-8">
                   <img src="assets/vid-icon.png" class="card-img-top" alt="Video" (click)='goToUrl(wishlist.post.id)' height="300">
-  
+
                 </div>
               </div>
             <div class="card-body ">
               <h5 class="card-title">{{wishlist.post.title}}</h5>
               <p class="card-text">Category: {{wishlist.post.category.category_name}}</p>
               <p class="card-text small">{{wishlist.post.article| words : 6}}</p>
-  
+
               <p class="card-text"><small class="">published by {{wishlist.profile.user}}</small></p>
               <p class="card-text"><small class="">{{wishlist.post.pub_at|date}}</small></p>
-  
+
               <!-- {{post.created_at}} -->
             </div>
-  
+
             <div class="card-footer">
               <div class="icons d-flex">
                 <div class="whatsapp d-flex">
@@ -121,9 +121,9 @@
                     <i class="fab fa-whatsapp" ></i>
                   </a>
                   <!-- <a href="https://wa.me/15551234567"><i (click)= 'copyUrl()' class="fas fa-share-alt" [ngxClipboard]="formInputText"></i></a> -->
-  
+
                 </div>
-  
+
                 <div class="fb">
                   <div class="fb-share-button"
                     data-href="https://mutuafranklin.github.io/ProperlearnApp/home"
@@ -135,36 +135,36 @@
                     </a>
                   </div>
                 </div>
-  
-  
+
+
               </div>
               <div class="details">
                   <button (click)='goToUrl(wishlist.post.id)' class=" custom btn btn-info">View Details</button>
-  
+
               </div>
-  
+
             </div>
           </div>
           </div>
-  
-  
+
+
         </div>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
       </div>
-  
-  
-  
+
+
+
     </div>
     </div>
-  
-  
-  
- 
-  
-  
-  
+
+
+
+
+
+
+

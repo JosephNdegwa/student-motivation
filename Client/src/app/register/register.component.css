@@ -55,7 +55,8 @@ label {
   font-weight: bold;
   font-size: 20px;
   line-height: 36px;
-  color: #11284B;
+  /* color: #11284B; */
+  color: white;
   display: flex;
   float: left;
 
