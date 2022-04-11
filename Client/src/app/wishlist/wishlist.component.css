@@ -55,11 +55,6 @@ h5{
 
 
   }
-
-  .card:hover{
-   background-color: green;
-  }
-
   .card-body{
     display: flex;
     flex-direction: column;
