@@ -12,7 +12,7 @@
 
   }
 h5{
-  color: green;
+  color: #11284B;
   font-weight: 800;
   margin-top: 2px;
 }
@@ -49,17 +49,12 @@ h5{
   .card{
     margin-top: 5%;
      /* background-color: rgba(22, 54, 80, 0.5) !important; */
-     background-color:green ;
+     background-color:#11284B ;
     color: aliceblue;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 
   }
-
-  .card:hover{
-   background-color: green;
-  }
-
   .card-body{
     display: flex;
     flex-direction: column;
