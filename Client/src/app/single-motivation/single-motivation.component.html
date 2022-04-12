@@ -8,15 +8,10 @@
     <!-- post -->
     <div class="col-md-9">
       <div class="card mb-3">
-        <div *ngIf="post?.audio_track">
-          <audio controls>
-            <source src="http://127.0.0.1:8000/api{{post.audio_track}}" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-          <!-- <audio controls width="auto" height="auto">
-            <source src="http://127.0.0.1:8000/api{{post.audio_track}}" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio> -->
+        <div *ngIf="post?.image">
+          <div *ngIf="post?.image">
+            <img src="https://res.cloudinary.com/barbie254/{{post.image}}" class="card-img-top" alt="..."
+              height="300">
         </div>
         <div *ngIf="post?.video">
           <div class="video">

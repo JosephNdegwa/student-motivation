@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1^y19c0%26mz$mb^qr!8x831(zde^7-=51sd1s0slqit5k$0vv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -133,7 +133,7 @@ LOGIN_REDIRECT_URL='/'
 
 # adding config
 cloudinary.config( 
-  cloud_name = "dofhqzexf", 
+  cloud_name = "barbie254", 
   api_key = "677344245685254", 
   api_secret = "WjJxvJN-UspQrQ_e20araK0SGt4" 
 )

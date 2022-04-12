@@ -18,8 +18,9 @@
 
             <div class="col-md-3" *ngFor="let wishlist of wishlist">
               <div class="card mb-3">
-              <div *ngIf="wishlist.post.audio_track == null && wishlist.post.video == null ">
-                <img src="assets/post.jpg" class="card-img-top" alt="" height="300">
+              <div *ngIf="wishlist.post.image == null && wishlist.post.video == null ">
+                <img src="https://res.cloudinary.com/barbie254/{{wishlist.post.image}}" class="card-img-top" alt="..."
+                height="300">
               </div>
               <div *ngIf="wishlist.post.image">
               </div>
