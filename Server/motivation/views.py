@@ -236,7 +236,7 @@ class ReviewDescription(APIView):
 @permission_classes((AllowAny, ))
 def review_mot_id(request, mot_pk):
     try: 
-        review = Review.objects.get(motivation=mot_pk) 
+        review = Review.objects.get(post=mot_pk) 
     except Review.DoesNotExist: 
         return JsonResponse({'message': 'This review does not exist'}, status=status.HTTP_404_NOT_FOUND) 
  
