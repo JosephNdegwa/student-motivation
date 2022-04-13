@@ -18,7 +18,7 @@ import { MotivationService } from 'src/app/services/motivation.service';
 export class FilterCategoryComponent implements OnInit {
 
   posts!:Post[];
-  // motivations!: any;
+
 
   categories:any;
   error: any;
@@ -126,7 +126,7 @@ export class FilterCategoryComponent implements OnInit {
     window.location.reload();
   }
   goToUrl(id: any){
-    this.router.navigate(['/motivation',id])
+    this.router.navigate(['/post',id])
   }
 
   copyUrl(){

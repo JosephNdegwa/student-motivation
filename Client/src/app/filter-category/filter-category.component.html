@@ -41,10 +41,11 @@
           <div class="col-md-3" *ngFor="let post of posts">
 
             <div class="card mb-3">
-              <div *ngIf="post.audio_track == null && post.video == null ">
+              <div *ngIf="post.image == null && post.video == null ">
                 <img src="assets/post.jpg" class="card-img-top" alt="" height="300">
               </div>
-              <div *ngIf="post.audio_track">
+              <div *ngIf="post.image">
+                <img src="https://res.cloudinary.com/barbie254/{{post.image}}" class="card-img-top vid-link" alt="..." height="300">
               </div>
               <div *ngIf="post?.video" class="video-icon">
                 <div class="col-md-8">
@@ -53,7 +54,7 @@
                 </div>
               </div>
               <div class="card-body ">
-                <h5 class="card-title">{{post.title}}</h5>
+                <h5 class="card-title">Title:{{post.title}}</h5>
                 <p class="card-text">Category:{{post.category.category_name}}</p>
                 <p class="card-text small">{{post.article| words : 6}}</p>
 
@@ -70,34 +71,9 @@
                     </form>
 
                   </div>
-                  
-
-                 
-
-                </div>
-                <div class="details">
-                    <button (click)='goToUrl(post.id)' class=" view-details btn btn-info">View Details</button>
 
                 </div>
 
-              </div>
-
-          </div>
-          </div>
-
-
-      </div>
-
-
-
-
-
-
-    </div>
-
-
-
-  </div>
 </div>
 <div class="dynamic-style" *ngIf="posts.length>4"  >
   <div class="container-fluid" id="main" >
@@ -118,8 +94,6 @@
 
 
           </div>
-
-
 
         </div>
         <div class="subscribe">
@@ -142,10 +116,11 @@
           <div class="col-md-3" *ngFor="let post of posts">
 
             <div class="card mb-3">
-              <div *ngIf="post.audio_track == null && post.video == null ">
+              <div *ngIf="post.image== null && post.video == null ">
                 <img src="assets/post.jpg" class="card-img-top" alt="" height="300">
               </div>
-              <div *ngIf="post.audio_track">
+              <div *ngIf="post.image">
+                <img src="https://res.cloudinary.com/barbie254/{{post.image}}" class="card-img-top vid-link" alt="..." height="300">
               </div>
               <div *ngIf="post?.video" class="video-icon">
                 <div class="col-md-8">
@@ -154,7 +129,7 @@
                 </div>
               </div>
               <div class="card-body ">
-                <h5 class="card-title">{{post.title}}</h5>
+                <h5 class="card-title">Title:{{post.title}}</h5>
                 <p class="card-text">Category:{{post.category.category_name}}</p>
                 <p class="card-text small">{{post.article| words : 6}}</p>
 
