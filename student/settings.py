@@ -196,7 +196,7 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
-    "https://sparkling-frangipane-04b000.netlify.app/"
+    "https://snazzy-cascaron-2754af.netlify.app/"
 ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -225,12 +225,13 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
-    "https://sparkling-frangipane-04b000.netlify.app/"
+    "https://snazzy-cascaron-2754af.netlify.app/"
+    
 )
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:4200",
-    "https://sparkling-frangipane-04b000.netlify.app/"
+    "https://snazzy-cascaron-2754af.netlify.app/"
 
 ]
 # Configure Django App for Heroku.
