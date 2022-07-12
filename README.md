@@ -15,10 +15,11 @@ A code camp application where students can sign up, login and get motivated by r
 * Visual Studio
 
 # To-do
+* Currently working on JWT authentication to allow user data protection.
 * Add more functions to the admin site
 
 # Known Bugs
-* Currently working on JWT authentication to allow user data protection.
+
 * Application is not allowing new sign ups to login using their details.
 
 
