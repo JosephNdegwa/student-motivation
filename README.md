@@ -2,7 +2,7 @@
 A code camp application where students can sign up, login and get motivated by reading articles about tech and also share images about the tech industry.
 
 ## Contiributors
-### [Joseph Ndegwa](https://github.com/JosephNdegwa), [Barbara Reson Mootian](https://github.com/barbaramootian), [Silver Odhiambo](https://github.com/sivernorman), [Faiso Abdirisak](https://github.com/sivernorman)
+[Joseph Ndegwa](https://github.com/JosephNdegwa), [Barbara Reson Mootian](https://github.com/barbaramootian), [Silver Odhiambo](https://github.com/sivernorman), [Faiso Abdirisak](https://github.com/sivernorman)
 
 ## Technologies
 * Python
@@ -24,7 +24,7 @@ A code camp application where students can sign up, login and get motivated by r
 
 # Contact information
 For further enqueries please contact
- [Joseph Ndegwa](https://github.com/JosephNdegwa)
+ Kariukindegwa98@gmail.com
 
 ## LIcense
  [MIT](https://choosealicense.com/licenses/mit/)
