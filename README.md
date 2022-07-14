@@ -21,6 +21,7 @@ A code camp application where students can sign up, login and get motivated by r
 # Known Bugs
 
 * Application is not allowing new sign ups to login using their details.
+* (You can use "user-name: barbra" and the "password: babi"  
 
 
 # Contact information
